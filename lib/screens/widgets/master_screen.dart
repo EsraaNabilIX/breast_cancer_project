@@ -1,3 +1,4 @@
+import 'package:breast_cancer_project/screens/about_us/about_us_view.dart';
 import 'package:breast_cancer_project/screens/check/check_view.dart';
 import 'package:breast_cancer_project/screens/home/home_view.dart';
 import 'package:breast_cancer_project/screens/infoGraph/infograph_view.dart';
@@ -10,7 +11,12 @@ class MasterScreen extends StatefulWidget {
 }
 
 class _MasterScreenState extends State<MasterScreen> {
-  var screens = [const HomeView(), const CheckView(), const InfoGraphView()];
+  var screens = [
+    const HomeView(),
+    const CheckView(),
+    const InfoGraphView(),
+    const AboutUsView()
+  ];
   int screensIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -52,6 +58,12 @@ class _MasterScreenState extends State<MasterScreen> {
                   size: 30,
                 ),
                 label: ' infoGraph'),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.person_rounded,
+                  size: 30,
+                ),
+                label: 'About us '),
           ],
         ),
       ),

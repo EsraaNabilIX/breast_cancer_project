@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
+import '../widgets/master_screen.dart';
+
 class InfoGraphView extends StatelessWidget {
   const InfoGraphView({Key? key}) : super(key: key);
 
@@ -21,6 +23,27 @@ class InfoGraphView extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
         child: ListView(
           children: [
+            Row(
+              children: [
+                InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const MasterScreen(),
+                        ),
+                      );
+                    },
+                    child: Icon(Icons.arrow_back_ios, color: Colors.grey[600])),
+                Text(
+                  'InfoGraph : ',
+                  style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.grey[600],
+                      fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
             Container(
               height: MediaQuery.of(context).size.height / 3,
               decoration: BoxDecoration(

@@ -17,11 +17,9 @@ class _OnBoardingViewState extends State<OnBoardingView> {
   int _currentIndex = 0;
 
   List<SliderObject> _getSliderData() => [
-        SliderObject(
-            "welcome",
-            "it is a small app help you to check about your self ",
+        SliderObject("welcome", "it is  app help you to check about your self ",
             ImagesAssets.onBoardingLogo1),
-        SliderObject("Breast cancer app", "by adding a photo or DNA sequence ",
+        SliderObject("Breast cancer app", "Don't worry we are here for you  ",
             ImagesAssets.onBoardingLogo2),
         SliderObject(
             "help you",

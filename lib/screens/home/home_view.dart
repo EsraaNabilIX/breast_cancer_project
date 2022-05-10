@@ -1,6 +1,7 @@
 import 'package:breast_cancer_project/screens/causes/causes_view.dart';
 import 'package:breast_cancer_project/screens/home/widgets/home_card.dart';
 import 'package:breast_cancer_project/screens/introduction/introduction_view.dart';
+import 'package:breast_cancer_project/screens/sings_symptoms/signs_symptoms_view.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -74,13 +75,20 @@ class HomeView extends StatelessWidget {
                 child: const HomeCard(
                     title: 'Causes', assetImage: 'assets/images/causes.jpg'),
               ),
-              const HomeCard(
-                title: 'Signs & symptoms',
-                assetImage: 'assets/images/signs.jpg',
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignsAndSymView(),
+                    ),
+                  );
+                },
+                child: const HomeCard(
+                  title: 'Signs & symptoms',
+                  assetImage: 'assets/images/signs.jpg',
+                ),
               ),
-              // // المضاعفات
-              // const HomeCard(title: 'Complication', assetImage: ''),
-              // const HomeCard(title: 'Treatment', assetImage: ''),
             ],
           ),
         ),
